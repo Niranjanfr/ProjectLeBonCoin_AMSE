@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lancementSecondeActivite = new Intent(MainActivity.this, AdAddActivity.class);
+                Intent lancementSecondeActivite = new Intent(MainActivity.this, CameraAdAddActivity .class);
                 startActivity (lancementSecondeActivite);
             }
         });
