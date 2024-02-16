@@ -53,7 +53,7 @@ public class CameraAdAddActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ad_add); // Complete with the identifier of your activity
+        setContentView(R.layout.activity_camera_ad_add); // Complete with the identifier of your activity
 
         camera_open_id = findViewById(R.id.button2);
         gallery_open_id = findViewById(R.id.button3);
