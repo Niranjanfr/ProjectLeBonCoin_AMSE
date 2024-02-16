@@ -20,9 +20,10 @@ public class AdListViewActivity extends AppCompatActivity {
         ArrayList<AdModel> ad_list = new ArrayList<AdModel>();
 
         if (extras != null){
-            String titre = i.getStringExtra("message1");
-            String address = i.getStringExtra("message2");
-            ad_list.add(new AdModel(titre, address, R.drawable.ic_launcher_background));
+            String titre = i.getStringExtra("Title");
+            String address = i.getStringExtra("address");
+            int imageResourceId = getIntent().getIntExtra("image", 0);
+            ad_list.add(new AdModel(titre, address, imageResourceId));
         }
 
         ad_list.add(new AdModel("Title1", "Address1", R.drawable.ic_launcher_background));
