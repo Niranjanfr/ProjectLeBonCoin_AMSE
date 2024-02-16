@@ -35,13 +35,17 @@ public class AdAddActivity extends AppCompatActivity {
         text_site = (TextView) findViewById(R.id.textView5);
         text_address = (TextView) findViewById(R.id.textView1);
 
-        String userText1 = editText1.getText().toString();
-        String userText2 = editText2.getText().toString();
+        final EditText userText1 = (EditText) findViewById(R.id.editText1);
+        final EditText userText2 = (EditText) findViewById(R.id.editText2);
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent lancementSecondeActivite = new Intent(AdAddActivity.this, AdListViewActivity.class);
+                lancementSecondeActivite.putExtra("message1", userText1.getText(). toString ());
+                lancementSecondeActivite.putExtra("message2", userText2.getText(). toString ());
                 startActivity (lancementSecondeActivite);
             }
         });

@@ -1,5 +1,7 @@
 package com.example.projectleboncoin_amse;
 
+import android.widget.BaseAdapter;
+
 public class AdModel {
     private String title;
     private String address;
@@ -15,6 +17,10 @@ public class AdModel {
     // Getter and Setter
     public String getTitle() {
         return title;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public void setTitle(String title) {
