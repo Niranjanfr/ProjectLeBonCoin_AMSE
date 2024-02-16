@@ -2,6 +2,8 @@ package com.example.projectleboncoin_amse;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -23,5 +25,24 @@ public class MainActivity extends AppCompatActivity {
 
         button9 = (Button) findViewById(R.id.button9);
         button10 = (Button) findViewById(R.id.button10);
+
+        //Button b = new Button(this);
+        //b.setText("Accelerometre");
+        //final EditText e = new EditText(this);
+        //e.setText("Cliquer pour obtenir les valeurs de l'accelerometre");
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent lancementSecondeActivite = new Intent(MainActivity.this, AdAddActivity.class);
+                startActivity (lancementSecondeActivite);
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent lancementSecondeActivite = new Intent(MainActivity.this, AdListViewActivity.class);
+                startActivity (lancementSecondeActivite);
+            }
+        });
     }
 }
