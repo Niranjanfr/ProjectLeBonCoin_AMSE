@@ -10,5 +10,7 @@ public class AdAddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad_add);
+        titre =
+        AdModel ad = new AdModel(titre, adresse)
     }
 }

@@ -13,10 +13,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button b = findViewById(R.id.button);
-        b.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
+        Button display = findViewById(R.id.button1);
+        Button add = findViewById(R.id.constant);
+        display.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View a){
                 Intent advancement = new Intent(MainActivity.this , AdListViewActivity.class );
+                startActivity (advancement);
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View b){
+                Intent advancement = new Intent(MainActivity.this , AdAddActivity.class );
                 startActivity (advancement);
             }
         });
