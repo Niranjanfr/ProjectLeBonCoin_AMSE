@@ -30,7 +30,7 @@ public class AdAddActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.button);
         editText1 = (EditText) findViewById(R.id.editText1);
-        editText2 = (EditText) findViewById(R.id.editText2);
+        editText2 = (EditText) findViewById(R.id.editText1);
 
         text_site = (TextView) findViewById(R.id.textView5);
         text_address = (TextView) findViewById(R.id.textView1);
@@ -41,8 +41,10 @@ public class AdAddActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lancementSecondeActivite = new Intent(AdAddActivity.this, AdListViewActivity.class);
-                startActivity (lancementSecondeActivite);
+                Intent addNewAd = new Intent(AdAddActivity.this, AdListViewActivity.class);
+                addNewAd.putExtra("Title",userText1);
+                addNewAd.putExtra("address",userText2);
+                startActivity (addNewAd);
             }
         });
     }
