@@ -38,11 +38,6 @@ public class AdAddActivity extends AppCompatActivity {
         String userText1 = editText1.getText().toString();
         String userText2 = editText2.getText().toString();
 
-
-        //Button b = new Button(this);
-        //b.setText("Accelerometre");
-        //final EditText e = new EditText(this);
-        //e.setText("Cliquer pour obtenir les valeurs de l'accelerometre");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
