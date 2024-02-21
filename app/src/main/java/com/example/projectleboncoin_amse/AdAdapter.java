@@ -1,6 +1,7 @@
 package com.example.projectleboncoin_amse;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
+
 import java.util.ArrayList;
 
 
@@ -40,6 +44,7 @@ public class AdAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
 
+
         if (convertView == null) {
             // 如果convertView为空，加载布局
 
@@ -67,6 +72,17 @@ public class AdAdapter extends BaseAdapter {
         viewHolder.addressTextView.setText(ad.getAddress());
         viewHolder.priceTextView.setText(ad.getPrice());
         Log.i("TEST", "Test");
+
+        boolean isRedValue = MainActivity.isMyBoolean();
+        if (isRedValue) {
+            // If isRedValue is true, set background color to soft yellow
+            int softYellow = Color.rgb(250, 252, 203);
+            convertView.setBackgroundColor(softYellow);
+        } else {
+            // Otherwise, set background color to a different color
+            // Here, I'm assuming you want to use the soft yellow color defined in resources
+            convertView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
+        }
         return convertView;
     }
 

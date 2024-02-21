@@ -2,6 +2,7 @@ package com.example.projectleboncoin_amse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Bundle;
 import android.content.Intent;
@@ -71,6 +72,17 @@ public class CameraAdAddActivity extends AppCompatActivity {
         });
 
         Button send = findViewById(R.id.button);
+
+        boolean isRedValue = MainActivity.isMyBoolean();
+        if (isRedValue) {
+            // If isRedValue is true, set background color to soft yellow
+            int softYellow = Color.rgb(250, 252, 203);
+            findViewById(android.R.id.content).setBackgroundColor(softYellow);
+        } else {
+            // Otherwise, set background color to a different color
+            // Here, I'm assuming you want to use the soft yellow color defined in resources
+            findViewById(android.R.id.content).setBackgroundColor(Color.WHITE);
+        }
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override

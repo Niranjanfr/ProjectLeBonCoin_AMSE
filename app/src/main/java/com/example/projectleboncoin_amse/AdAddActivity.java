@@ -2,6 +2,7 @@ package com.example.projectleboncoin_amse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
@@ -51,5 +52,6 @@ public class AdAddActivity extends AppCompatActivity {
                 startActivity (lancementSecondeActivite);
             }
         });
+
     }
 }
