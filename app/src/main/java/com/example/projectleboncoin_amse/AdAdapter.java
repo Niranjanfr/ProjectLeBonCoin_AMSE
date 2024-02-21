@@ -48,6 +48,8 @@ public class AdAdapter extends BaseAdapter {
             viewHolder.imageView = convertView.findViewById(R.id.imageView2);
             viewHolder.titleTextView = convertView.findViewById(R.id.titre1);
             viewHolder.addressTextView = convertView.findViewById(R.id.address1);
+            viewHolder.priceTextView = convertView.findViewById(R.id.price1);
+
 
             // 将ViewHolder对象存储在convertView中
             convertView.setTag(viewHolder);
@@ -63,12 +65,14 @@ public class AdAdapter extends BaseAdapter {
         //viewHolder.imageView.setImageResource(ad.getImage());
         viewHolder.titleTextView.setText(ad.getTitle());
         viewHolder.addressTextView.setText(ad.getAddress());
+        viewHolder.priceTextView.setText(ad.getPrice());
 
         return convertView;
     }
 
     // ViewHolder类，用于保存视图中的各个组件
     private static class ViewHolder {
+        TextView priceTextView;
         ImageView imageView;
         TextView titleTextView;
         TextView addressTextView;

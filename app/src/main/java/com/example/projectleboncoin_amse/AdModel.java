@@ -6,12 +6,15 @@ public class AdModel {
     private String title;
     private String address;
     private int image;
+    private int price;
 
     // Constructor
-    public AdModel(String title, String address, int image) {
+    public AdModel(String title, String address, int image,int price) {
         this.title = title;
         this.address = address;
         this.image = image;
+        this.price = price;
+
     }
 
     // Getter and Setter
@@ -26,6 +29,8 @@ public class AdModel {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public int getPrice() {return price;}
 // ...
 }
 //public class AdAdapter extends BaseAdapter {

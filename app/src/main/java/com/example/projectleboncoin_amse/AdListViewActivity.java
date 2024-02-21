@@ -22,12 +22,13 @@ public class AdListViewActivity extends AppCompatActivity {
         if (extras != null){
             String titre = i.getStringExtra("Title");
             String address = i.getStringExtra("address");
+            //int price = i.getIntExtra("price");
             int imageResourceId = getIntent().getIntExtra("image", 0);
-            ad_list.add(new AdModel(titre, address, imageResourceId));
+            ad_list.add(new AdModel(titre, address, imageResourceId,10));
         }
 
-        ad_list.add(new AdModel("Title1", "Address1", R.drawable.ic_launcher_background));
-        ad_list.add(new AdModel("Title2", "Address2", R.drawable.ic_launcher_background));
+        ad_list.add(new AdModel("Title1", "Address1", R.drawable.ic_launcher_background,10));
+        ad_list.add(new AdModel("Title2", "Address2", R.drawable.ic_launcher_background,10));
         ListView listView = findViewById(R.id.listview);
         AdAdapter AdAdapter = new AdAdapter(this, ad_list);
         listView.setAdapter(AdAdapter);

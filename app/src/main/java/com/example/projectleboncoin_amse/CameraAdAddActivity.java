@@ -78,7 +78,7 @@ public class CameraAdAddActivity extends AppCompatActivity {
 
 //                ImageView image = findViewById(R.id. ...);
                 TextView title = findViewById(R.id. editText1);
-                TextView address = findViewById(R.id. editText1);
+                TextView address = findViewById(R.id. editText2);
 
                 String Title = title.getText().toString();
                 String Address = address.getText().toString();
