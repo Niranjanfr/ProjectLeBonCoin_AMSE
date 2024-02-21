@@ -27,8 +27,8 @@ public class AdListViewActivity extends AppCompatActivity {
             ad_list.add(new AdModel(titre, address, imageResourceId,price));
         }
 
-        ad_list.add(new AdModel("Title1", "Address1", R.drawable.ic_launcher_background,"300.000€"));
-        ad_list.add(new AdModel("Title2", "Address2", R.drawable.ic_launcher_background,"255.000€"));
+        ad_list.add(new AdModel("wood", "263 rue du grand bail", R.drawable.wood,"300.000€"));
+        ad_list.add(new AdModel("steel", "263 rue du grand bail", R.drawable.steel,"255.000€"));
         ListView listView = findViewById(R.id.listview);
         AdAdapter AdAdapter = new AdAdapter(this, ad_list);
         listView.setAdapter(AdAdapter);

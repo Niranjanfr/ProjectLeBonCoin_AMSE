@@ -22,6 +22,10 @@ public class AdModel {
         return title;
     }
 
+    public int getImage() {
+        return image;
+    }
+
     public String getAddress() {
         return address;
     }

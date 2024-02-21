@@ -1,6 +1,7 @@
 package com.example.projectleboncoin_amse;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,7 @@ public class AdAdapter extends BaseAdapter {
 
         if (convertView == null) {
             // 如果convertView为空，加载布局
+
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_listview_ad, parent, false);
 
             // 创建一个ViewHolder对象保存视图中的各个组件
@@ -49,8 +51,6 @@ public class AdAdapter extends BaseAdapter {
             viewHolder.titleTextView = convertView.findViewById(R.id.titre1);
             viewHolder.addressTextView = convertView.findViewById(R.id.address1);
             viewHolder.priceTextView = convertView.findViewById(R.id.price1);
-
-
             // 将ViewHolder对象存储在convertView中
             convertView.setTag(viewHolder);
         } else {
@@ -62,11 +62,11 @@ public class AdAdapter extends BaseAdapter {
         AdModel ad = (AdModel) getItem(position);
 
         // 设置广告数据到视图中
-        //viewHolder.imageView.setImageResource(ad.getImage());
+        viewHolder.imageView.setImageResource(ad.getImage());
         viewHolder.titleTextView.setText(ad.getTitle());
         viewHolder.addressTextView.setText(ad.getAddress());
         viewHolder.priceTextView.setText(ad.getPrice());
-
+        Log.i("TEST", "Test");
         return convertView;
     }
 
