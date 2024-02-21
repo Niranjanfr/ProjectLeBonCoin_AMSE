@@ -15,6 +15,7 @@ public class AdAddActivity extends AppCompatActivity {
     Button button;
     EditText editText1;
     EditText editText2;
+    EditText editText3;
 
     TextView text_site;
     TextView text_address;
@@ -31,6 +32,7 @@ public class AdAddActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         editText1 = (EditText) findViewById(R.id.editText1);
         editText2 = (EditText) findViewById(R.id.editText2);
+//        editText3 = (EditText) findViewById(R.id.editText3);
 
         text_site = (TextView) findViewById(R.id.textView5);
         text_address = (TextView) findViewById(R.id.textView1);

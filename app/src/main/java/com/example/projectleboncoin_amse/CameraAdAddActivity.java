@@ -79,14 +79,17 @@ public class CameraAdAddActivity extends AppCompatActivity {
 //                ImageView image = findViewById(R.id. ...);
                 TextView title = findViewById(R.id. editText1);
                 TextView address = findViewById(R.id. editText2);
+                TextView price = findViewById((R.id. editText3));
 
                 String Title = title.getText().toString();
                 String Address = address.getText().toString();
+                String Price = address.getText().toString();
 
                 Intent intent = new Intent(CameraAdAddActivity.this, AdListViewActivity.class);
                 intent.putExtra("image", R.drawable.ic_launcher_background); // Add a drawable image because image management is not implemented.
                 intent.putExtra("Title",Title);
                 intent.putExtra("address",Address);
+                intent.putExtra("price",Price);
                 startActivity(intent);
             }
         });

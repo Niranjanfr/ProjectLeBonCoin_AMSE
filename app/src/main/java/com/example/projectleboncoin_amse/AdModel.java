@@ -6,10 +6,10 @@ public class AdModel {
     private String title;
     private String address;
     private int image;
-    private int price;
+    private String price;
 
     // Constructor
-    public AdModel(String title, String address, int image,int price) {
+    public AdModel(String title, String address, int image,String price) {
         this.title = title;
         this.address = address;
         this.image = image;
@@ -30,7 +30,7 @@ public class AdModel {
         this.title = title;
     }
 
-    public int getPrice() {return price;}
+    public String getPrice() {return price;}
 // ...
 }
 //public class AdAdapter extends BaseAdapter {
