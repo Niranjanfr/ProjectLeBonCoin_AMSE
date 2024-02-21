@@ -83,7 +83,7 @@ public class CameraAdAddActivity extends AppCompatActivity {
 
                 String Title = title.getText().toString();
                 String Address = address.getText().toString();
-                String Price = address.getText().toString();
+                String Price = price.getText().toString();
 
                 Intent intent = new Intent(CameraAdAddActivity.this, AdListViewActivity.class);
                 intent.putExtra("image", R.drawable.ic_launcher_background); // Add a drawable image because image management is not implemented.
